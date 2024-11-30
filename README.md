@@ -15,7 +15,7 @@ Tested on:
 1.  Install Golang, Git, raspberrypi-kernel-headers. 
 2.  Then clone the repository `git clone --recurse-submodules https://github.com/DontFred/pipod`.
 3.  Change username in script a2dp-autoconnect.
-4.  Compile the Go package with `GO111MODULE=on GOOS=linux GOARCH=arm GOARM=6 go build github.com/amitojsingh366/ipod/cmd/ipod` and put it into install_files.
+4.  Compile the Go package with `GO111MODULE=on GOOS=linux GOARCH=arm GOARM=6 go build github.com/amitojsingh366/ipod/cmd/ipod.git` and put it into install_files.
 5.  add `dtoverlay=dwc2` to the end of /boot/firmware/config.txt to enable USB gadget mode
 6.  compile the kernel modules (ipod-gadget directory) and put the .ko files in install_files
 7.  copy the pipod directory to the Pi
