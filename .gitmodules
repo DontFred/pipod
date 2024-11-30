@@ -1,6 +1,6 @@
 [submodule "ipod-gadget"]
 	path = ipod-gadget
-	url = https://github.com/dangerzau/ipod-gadget.git
+	url = https://github.com/dangerza/ipod-gadget.git
 [submodule "ipod"]
 	path = ipod
 	url = https://github.com/amitojsingh366/ipod.git
