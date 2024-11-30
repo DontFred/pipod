@@ -10,7 +10,7 @@ NAME="<<YOUR MAC ADDRESS>>"
 
 
 BT_MAC=$(echo "$NAME" | sed 's/:/_/g' | sed 's/\"//g')
-BT_USER=$USER # change this to your user
+BT_USER="<<User>>" # change this to your user
 
 function log {
 	echo "[$(date)]: $*"  # >> /var/log/a2dp-autoconnect

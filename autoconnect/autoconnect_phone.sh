@@ -2,7 +2,7 @@
 
 # Define the specific MAC address of the device you want to connect to
 # Leave empty if you want to try connecting to all previously paired devices
-TARGET_DEVICE="BLUETOOTH MAC ADDRESS"  # Replace with the MAC address of your target device
+TARGET_DEVICE="<<BLUETOOTH MAC ADDRESS>>"  # Replace with the MAC address of your target device
 
 # Check the connection status of all devices
 DEVICE_STATUS=$(bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done)
