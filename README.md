@@ -20,6 +20,8 @@ Tested on:
 6.  compile the kernel modules (ipod-gadget directory) and put the .ko files in install_files
 7.  copy the pipod directory to the Pi
 8.  run `sudo ./install.sh`
+9.  do `systemctl --user enable pulseaudio.service`
+10. run `sudo .install-2.sh`
 9.  [enable auto login](https://gist.github.com/oleq/24e09112b07464acbda1#autologin) so that Pulseaudio can start automatically
 10.  edit the file `autoconnect_phone.sh`.
 Replace the `TARGET_DEVICE` variable with your bluetooth device's MAC address
@@ -29,6 +31,7 @@ Also make sure that if you run `pactl list sources short`, the value of `$PA_SIN
 12.  [Pair and trust](https://gist.github.com/oleq/24e09112b07464acbda1#setup-bluetooth) your bluetooth device
 13.  Reboot, connect everything (USB to car; manually connect phone via bluetooth) and test!
 
+Tut: https://forums.raspberrypi.com/viewtopic.php?t=235519 ; https://unix.stackexchange.com/questions/65246/change-pulseaudio-input-output-from-shell
 
 ## TODO:
 *  Figure out how to get the Pi to automatically connect to the bluetooth device (currently you have to manually connect from the device)

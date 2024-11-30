@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eu
 
+username='<<Username>>'
 # Install the kernel modules
 cp -r install_files/ipod_gadget/*.ko /lib/modules/$(uname -r)/
 # TODO: bring this back once DKMS is done
@@ -29,7 +30,7 @@ systemctl enable autoconnect-phone
 
 # install bluetooth and pulseaudio dependencies
 apt-get install alsa-utils bluez bluez-tools pulseaudio-module-bluetooth
-usermod -a -G lp $USER
+usermod -a -G lp $username
 
 # configure pulseaudio
 # TODO: look at other resampling methods
@@ -48,16 +49,4 @@ mkdir -p ~/.config/pulse
 cp pulseaudio/default.pa ~/.config/pulse/
 mkdir -p ~/.config/systemd/user
 cp pulseaudio/pulseaudio.service ~/.config/systemd/user/
-chown -R $USER:$USER ~/.config
-systemctl --user enable pulseaudio.service
-loginctl enable-linger $USER
-
-# configure bluetooth
-bluetoothaudioconfig='[General]
-Class = 0x20041C
-Enable = Source,Sink,Media,Socket'
-echo "$bluetoothaudioconfig" > /etc/bluetooth/audio.conf
-
-# setup a udev rule to automatically connect the bluetooth A2DP source to the Pulseaudio sink
-cp udev/81-input-a2dp-autoconnect.rules /etc/udev/rules.d/
-cp udev/99-bluetooth-service-restart.rules /etc/udev/rules.d/
+chown -R $username:$username ~/.config
