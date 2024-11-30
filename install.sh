@@ -17,7 +17,7 @@ cp ipod.service /etc/systemd/system/
 
 cp autoconnect/start-service.sh /usr/local/bin/
 cp autoconnect/stop-service.sh /usr/local/bin/
-cp autoconnect/autoconnect_phone.service /etc/systemd/system/
+cp autoconnect/autoconnect-phone.service /etc/systemd/system/
 
 systemctl enable ipod
 systemctl enable autoconnect-phone
