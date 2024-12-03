@@ -3,4 +3,4 @@
 	url = https://github.com/dangerzau/ipod-gadget.git
 [submodule "ipod"]
 	path = ipod
-	url = https://github.com/amitojsingh366/ipod.git
+	url = https://github.com/teostofell/ipod.git
